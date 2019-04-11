@@ -1,0 +1,29 @@
+{
+  "name": "@acme/core",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -b .",
+    "clean": "rm -rf dist *.tsbuildinfo",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "lint": "tslint --project .",
+    "lint:fix": "tslint --project . --fix",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@acme/tools": "0.0.1",
+    "tslint-config-prettier": "^1.18.0"
+  },
+  "tslint": {
+    "extends": "../../tslint.json"
+  }
+}

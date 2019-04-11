@@ -1,0 +1,51 @@
+{
+  "name": "@acme/monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/**",
+    "tools"
+  ],
+  "scripts": {
+    "start": "npm run build && echo to-do",
+    "prebuild": "npm run clean",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "test": "lerna run test",
+    "test:watch": "lerna run --parallel test:watch",
+    "coverage": "lerna run coverage",
+    "lint": "lerna run lint",
+    "lint:fix": "lerna run lint:fix",
+    "pretty:check": "prettier --list-different \"**/*.{css,html,js,json,md,scss,ts}\"",
+    "pretty:fix": "prettier --write \"**/*.{css,js,html,json,md,scss,ts}\"",
+    "fix": "npm run lint:fix && npm run pretty:fix",
+    "link-packages": "lerna link",
+    "precommit": "lint-staged"
+  },
+  "devDependencies": {
+    "husky": "^1.3.1",
+    "jest": "^24.7.1",
+    "lerna": "^3.13.2",
+    "lint-staged": "^8.1.5",
+    "prettier": "^1.16.4",
+    "tslint": "^5.15.0",
+    "typescript": "^3.4.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{css,html,js,json,md,scss,ts}": [
+      "prettier --write",
+      "git add"
+    ],
+    "*.ts": [
+      "tslint --fix",
+      "git add"
+    ]
+  }
+}

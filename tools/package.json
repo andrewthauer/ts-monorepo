@@ -1,0 +1,16 @@
+{
+  "name": "@acme/tools",
+  "private": true,
+  "version": "0.0.1",
+  "main": "index.js",
+  "license": "MIT",
+  "files": [
+    "jest.config.js",
+    "lint-staged.config.js",
+    "prettier.config.js",
+    "tslint.config.json"
+  ],
+  "scripts": {
+    "precommit": "lint-staged"
+  }
+}

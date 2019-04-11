@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": ["es2018", "dom"],
+    "moduleResolution": "node",
+    "rootDir": ".",
+    "baseUrl": "./packages",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "paths": {
+      "@acme/*": ["./*/src"]
+    }
+  }
+}
