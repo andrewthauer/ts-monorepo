@@ -9,7 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -b .",
+    "build": "npm run build:ts",
+    "build:ts": "tsc -b .",
     "clean": "rm -rf dist *.tsbuildinfo",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,7 +19,9 @@
     "lint:fix": "tslint --project . --fix",
     "precommit": "lint-staged"
   },
-  "dependencies": {},
+  "dependencies": {
+    "ramda": "^0.26.1"
+  },
   "devDependencies": {
     "@acme/tools": "0.0.1",
     "tslint-config-prettier": "^1.18.0"

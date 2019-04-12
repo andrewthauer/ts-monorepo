@@ -1,6 +1,5 @@
-function main() {
-  // tslint:disable-next-line no-console
-  console.log(`I'm running`);
-}
+import { doubleNumbers } from '@acme/api';
 
-main();
+// tslint:disable no-console
+
+console.log(`Doubled 1,2,3: ${doubleNumbers([1, 2, 3])}`);

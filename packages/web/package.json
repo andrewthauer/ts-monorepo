@@ -9,7 +9,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -b .",
+    "build": "npm run build:bundle",
+    "build:ts": "tsc -b .",
+    "build:bundle": "webpack",
     "clean": "rm -rf dist *.tsbuildinfo",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,7 +20,9 @@
     "lint:fix": "tslint --project . --fix",
     "precommit": "lint-staged"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@acme/api": "1.0.0"
+  },
   "devDependencies": {
     "@acme/tools": "0.0.1"
   },

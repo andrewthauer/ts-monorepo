@@ -9,8 +9,9 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc -b .",
-    "clean": "rm -rf dist *.tsbuildinfo",
+    "build": "npm run build:ts",
+    "build:ts": "tsc -b .",
+    "clean": "rm -rf dist",
     "test": "jest",
     "test:watch": "jest --watch",
     "coverage": "jest --coverage",
@@ -18,7 +19,9 @@
     "lint:fix": "tslint --project . --fix",
     "precommit": "lint-staged"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@acme/core": "1.0.0"
+  },
   "devDependencies": {
     "@acme/tools": "0.0.1"
   },

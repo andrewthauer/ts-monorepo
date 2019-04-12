@@ -2,8 +2,9 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "tsBuildInfoFile": "../../.build-cache/cli.tsbuildinfo"
   },
   "include": ["src"],
-  "references": [{ "path": "../api" }]
+  "references": [{ "path": "../api", "prepend": false }]
 }

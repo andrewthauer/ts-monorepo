@@ -2,7 +2,13 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "rootDir": "./src",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "tsBuildInfoFile": "../../.build-cache/web.tsbuildinfo",
+    "composite": false,
+    "incremental": true,
+    "declaration": false,
+    "declarationMap": false
   },
-  "include": ["src"]
+  "include": ["src"],
+  "references": [{ "path": "../api", "prepend": false }]
 }
